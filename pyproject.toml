@@ -1,0 +1,28 @@
+[project]
+name = "tollgate"
+version = "0.1.0"
+description = "A gateway between AI agents and your warehouse: cost per agent task, waste detection, caching and budgets."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "mcp>=2.3",
+    "duckdb>=1.1",
+    "sqlglot>=25",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+tollgate = "tollgate.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["tollgate*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

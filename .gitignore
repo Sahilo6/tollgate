@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.egg-info/
+*.duckdb
+*.duckdb.wal
+tollgate-log*.jsonl
+.pytest_cache/
+.mcp.json
+.DS_Store
+# internal notes: real people's names and our plans, never publish
+docs/OUTREACH.*
+docs/outreach-tracker.xlsx
+docs/HANDOFF.*
+docs/PAIN-CHECK.md
+docs/DEMO.md
+docs/build_pdf.py
